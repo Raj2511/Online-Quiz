@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.header {
+    background: rgb(0, 212, 255);
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 100%, rgba(2, 0, 36, 1) 100%);
+}
+
+/* .navbar-brand {
+    color: black !important;
+} */
+
+.nav-link {
+    margin: 3px;
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.navbar-nav {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.header .navbar-toggler {
+    padding-right: 20px;
+    outline: none !important;
+    border: none !important;
+}
+
+.navbar .fa {
+    color: #fff !important;
+    font-size: 25px;
+}
+
+.nav-link:hover {
+    font-weight: 500;
+    border-bottom: 1px solid #fff;
+}
+
+.navbar-toggler-icon {
+    color: #fff !important;
+}
+
+.bord {
+    /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.testDetail ul {
+    list-style-type: none;
+    margin: 10px 0px;
+}
+
+/* .testDetail li {
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+/* .datealign {
+    text-align: center;
+    padding: 30px 0px;
+} */
+
+.displayques .col-md-8 {
+    background-color: gray;
+    height: 350px;
+}
+
+/* .displayques .movebutton {
+    margin-top: 10px;
+} */
+
+/* .cont {
+    text-align: center;
+    margin: 20px;
+} */
+
+.quesno {
+    width: fit-content;
+    margin-top: 10px;
+    padding: 0px 10px;
+    background-color: aqua;
+    color: black;
+    font-weight: 500;
+}
+
+.testDetail .col-md-2 {
+    background: rgb(147, 23, 150);
+    background: radial-gradient(circle, rgba(147, 23, 150, 1) 27%, rgba(184, 29, 183, 1) 84%);
+    color: #fff;
+}
+
+.scroll {
+    overflow-y: scroll;
+    height: 40%;
+    width: 60%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.modal h5 {
+    color: green;
+}
+
+.title {
+    font-size: 14px;
+}
+
+.value {
+    font-size: 15px;
+    font-weight: 600;
+}
+@media screen and (min-width: 350px) and (max-width: 450px) {
+
+    .nav-link:hover {
+        font-weight: 500;
+        border-bottom: none !important;
+    }
+
+    .cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+        padding: 10px;
+    }
+
+    .displayques .col-md-8 {
+        height: auto !important;
+    }
+
+    .scroll {
+        height: 100px !important;
+        width: 300px !important;
+    }
+}

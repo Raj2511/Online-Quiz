@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test project</title>
+</head>
+<body>
+    <div class="displayques">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 col-12 m-auto">
+              <h5 id="ques" class="cont"></h5>
+              <div class="cont">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="option1" value="answer1" >option1
+                  <label class="form-check-label" for="option1" id="choice_a" >
+                    <p id="opt1"></p>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="option2" value="answer2">option2
+                  <label class="form-check-label" for="option2" id="choice_b">
+                    <p id="opt2"></p>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="option3" value="answer3">option3
+                  <label class="form-check-label" for="option3" id="choice_c">
+                    <p id="opt3"></p>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="option4" value="answer4">option4
+                  <label class="form-check-label" for="option4" id="choice_d">
+                    <p id="opt4"></p>
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="option5" value="answer5">option5
+                  <label class="form-check-label" for="option5 id="choice_e">
+                    
+                  </label>
+                </div>
+              </div>
+                
+              
+            </div>
+            <div class="movebutton d-flex justify-content-evenly">
+              <button type="button" class="btn btn-success" id="prebtn">Previous</button>
+              <button type="button" class="btn btn-success" id="nxtbtn">Next</button>
+            </div>
+    <script type="text/javascript">
+        function disques()
+        {
+          count = 0;
+          var quesdata = [
+            {
+              question: "Which language runs in a web browser?",
+              a: "Java",
+              b: "C",
+              c: "Python",
+              d: "javascript",
+              e: "php",
+              correct: "d"
+            },
+            {
+              question: "Which language runs in a Mobile?",
+              a: "Java",
+              b: "c++",
+              c: "Python",
+              d: "javascript",
+              correct: "a"
+            },
+            {
+              question: "What does CSS stand for?",
+              a: "Central Style Sheets",
+              b: "Cascading Style Sheets",
+              c: "Cascading Simple Sheets",
+              d: "Cars SUVs Sailboats"
+            },
+            {
+              question: "What does HTML stand for?",
+              a: "Hypertext Markup Language",
+              b: "Hypertext Markdown Language",
+              c: "Hyperloop Machine Language",
+              d: "Helicopters Terminals Motorboats Lamborginis"
+            }
+
+          ]
+          const q1 = document.getElementById('ques')
+          const o1 = document.getElementById('option1')
+          const d1 = document.getElementById('opt1')
+          const o2 = document.getElementById('option2')
+          const o3 = document.getElementById('option3')
+          const o4 = document.getElementById('option4')
+          const o5 = document.getElementById('option5')
+          const nxtbtn = document.getElementById('nxtbtn')
+          const prebtn = document.getElementById('prebtn')
+
+          dis()
+          
+
+          nxtbtn.addEventListener('click',() => {
+            if(count < 3){
+              count++
+            }
+            
+            dis()
+            
+            
+          }
+         )
+         prebtn.addEventListener('click',() => {
+           if(count > 0)
+           {
+            count--
+           }
+            
+            dis()
+          }
+         )
+         function dis(){
+            
+              const quesdis = quesdata[count];
+              q1.innerText = quesdis.question
+              o1.innerHTML= quesdis.a
+              d1.innerHTML = quesdis.a
+              o2.value = quesdis.b
+              o3.value = quesdis.c
+              o4.value = quesdis.d
+              o5.value = quesdis.e
+              findans()
+              
+          }
+          function findans(){
+            
+           var rad =  document.getElementsByName('flexRadioDefault')
+            for(var i = 0; i < 4; i++)
+            {
+              if(rad[i].checked)
+              {
+                console.log(rad[i])
+                console.log(rad[i].value)
+                console.log(rad[i].id)
+              }
+            }
+          }
+        }
+        window.addEventListener('load', event => {
+         
+          disques();
+    });
+
+
+
+
+
+
+
+
+
+
+    
+    var radlist = document.getElementsByName('flexRadioDefault');
+                ans = quesdata[count].correct
+                selected = radlist[i].value
+                if(ans == selected)
+                {
+                  console.log("ok")
+                }
+    </script>
+    
+</body>
+</html>
